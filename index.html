@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X-5 SMAN 24 JAKARTA | V5 FINAL</title>
+<meta name="theme-color" content="#06b6d4">
+<style>
+:root{--a:#06b6d4;--b:#8b5cf6;--bg:#020617;--card:rgba(255,255,255,.08)}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+html{scroll-behavior:smooth}
+body{color:#fff;background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#0c4a6e);background-size:400% 400%;animation:bg 18s ease infinite}
+@keyframes bg{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--a),var(--b));z-index:9999}
+nav{position:sticky;top:0;background:rgba(0,0,0,.5);backdrop-filter:blur(12px);padding:12px;text-align:center;z-index:999}
+nav a{color:#fff;text-decoration:none;padding:10px 12px;display:inline-block}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:20px}
+.glow{font-size:5rem;color:#67e8f9;text-shadow:0 0 20px #22d3ee,0 0 50px #22d3ee}
+.section{max-width:1400px;margin:auto;padding:50px 20px}
+.glass{background:var(--card);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:22px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{padding:20px;transition:.3s}
+.card:hover{transform:translateY(-8px)}
+h2{color:#67e8f9;margin-bottom:15px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border:1px solid rgba(255,255,255,.15)}
+th{background:#1d4ed8}
+input{width:100%;padding:12px;border:none;border-radius:12px}
+.student{padding:8px;margin:4px 0;border-radius:10px;background:rgba(255,255,255,.08)}
+.reveal{opacity:0;transform:translateY(30px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+footer{text-align:center;padding:40px}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav>
+<a href="#dashboard">Dashboard</a>
+<a href="#struktur">Struktur</a>
+<a href="#jadwal">Jadwal</a>
+<a href="#pj">PJ</a>
+<a href="#piket">Piket</a>
+<a href="#siswa">Siswa</a>
+</nav>
+
+<section class="hero">
+<div>
+<h1 class="glow">X-5</h1>
+<h2>SMAN 24 JAKARTA</h2>
+<p id="motto"></p><br>
+<div id="clock" class="glass" style="padding:15px"></div>
+</div>
+</section>
+
+<section id="dashboard" class="section reveal">
+<h2>📊 Dashboard</h2>
+<div class="cards">
+<div class="glass card"><h3>Total Siswa</h3><h1>36</h1></div>
+<div class="glass card"><h3>Laki-laki</h3><h1>10</h1></div>
+<div class="glass card"><h3>Perempuan</h3><h1>26</h1></div>
+<div class="glass card"><h3>PJ Mapel</h3><h1>15</h1></div>
+</div>
+</section>
+
+<section id="struktur" class="section reveal">
+<h2>👥 Struktur Kelas</h2>
+<div class="cards">
+<div class="glass card">Wali Kelas<br><b>Rani Agus, S.T.</b></div>
+<div class="glass card">Ketua Kelas<br><b>Muhammad Ridho Pratama Alfaridzi</b></div>
+<div class="glass card">Sekretaris<br><b>Putri Amellia & Kharisma Syafirul Jannah</b></div>
+<div class="glass card">Bendahara<br><b>Stevanny Fernandes & Chloe Audrey Fahmi</b></div>
+</div>
+</section>
+
+<section id="jadwal" class="section reveal">
+<h2>📅 Jadwal Pelajaran Lengkap</h2>
+<div class="glass" style="overflow:auto;padding:10px">
+<table><tr><th>Jam</th><th>Senin</th><th>Selasa</th><th>Rabu</th><th>Kamis</th><th>Jumat</th></tr>
+<tr><td>1</td><td>Ekonomi</td><td>Bahasa Indonesia</td><td>Fisika</td><td>Agama</td><td>Sejarah</td></tr>
+<tr><td>2</td><td>Ekonomi</td><td>Bahasa Indonesia</td><td>Fisika</td><td>Agama</td><td>Sejarah</td></tr>
+<tr><td>3</td><td>Biologi</td><td>Bahasa Inggris</td><td>Fisika</td><td>Agama</td><td>Sejarah</td></tr>
+<tr><td>4</td><td>Sosiologi</td><td>Bahasa Inggris</td><td>Kimia</td><td>PJOK</td><td>Matematika</td></tr>
+<tr><td>5</td><td>Sosiologi</td><td>Bahasa Inggris</td><td>Kimia</td><td>PJOK</td><td>Matematika</td></tr>
+<tr><td>6</td><td>Sosiologi</td><td>Geografi</td><td>Kimia</td><td>PJOK</td><td>BK</td></tr>
+<tr><td>7</td><td>Bahasa Indonesia</td><td>Biologi</td><td>Matematika</td><td>Pendidikan Pancasila</td><td>-</td></tr>
+<tr><td>8</td><td>Bahasa Indonesia</td><td>Biologi</td><td>Matematika</td><td>Pendidikan Pancasila</td><td>-</td></tr>
+<tr><td>9</td><td>Seni Budaya</td><td>Ekonomi</td><td>Informatika</td><td>Geografi</td><td>-</td></tr>
+<tr><td>10</td><td>Seni Budaya</td><td>-</td><td>Informatika</td><td>Geografi</td><td>-</td></tr>
+</table>
+</div>
+</section>
+
+<section id="pj" class="section reveal"><h2>📚 PJ Mata Pelajaran</h2>
+<div class="glass" style="padding:10px"><table>
+<tr><th>Mapel</th><th>PJ</th></tr>
+<tr><td>Bahasa Indonesia</td><td>Fara, Shifa</td></tr>
+<tr><td>Pendidikan Pancasila</td><td>Kevin, Mahir</td></tr>
+<tr><td>Matematika</td><td>Almyra, Aurelia</td></tr>
+<tr><td>Kimia</td><td>Maulidya, Wadifatul</td></tr>
+<tr><td>Fisika</td><td>Yunia, Ailsa</td></tr>
+<tr><td>Biologi</td><td>Vicky, Haya</td></tr>
+<tr><td>Bahasa Inggris</td><td>Azkha, Jyoti</td></tr>
+<tr><td>Sosiologi</td><td>Sasha, Fakhira</td></tr>
+<tr><td>Geografi</td><td>Aira, Aisyah</td></tr>
+<tr><td>Ekonomi</td><td>Syahdan, Nabilah</td></tr>
+<tr><td>Agama Islam</td><td>Fawaid, Sigit</td></tr>
+<tr><td>PJOK</td><td>Andrea, Memey</td></tr>
+<tr><td>Seni Budaya</td><td>Nayla, Desphia</td></tr>
+<tr><td>Informatika</td><td>Mozza, Tania</td></tr>
+<tr><td>Sejarah</td><td>Fuad, Okta</td></tr>
+</table></div></section>
+
+<section id="piket" class="section reveal"><h2>🧹 Jadwal Piket</h2>
+<div class="cards">
+<div class="glass card"><b>Senin</b><br>Alisa, Aira, Aisyah, Almyra, Andrea, Aurelia, Chloe, Kevin</div>
+<div class="glass card"><b>Selasa</b><br>Fakhira, Janeeta, Okta, Jyoti, Desphia, Fuad, Azkha</div>
+<div class="glass card"><b>Rabu</b><br>Maulidya, Mozza, Nabilah, Kharisma, Mafaza, Fawaid, Mahir</div>
+<div class="glass card"><b>Kamis</b><br>Quinsha, Sabrina, Naylatul, Shifa, Amel, Ridho, Sigit</div>
+<div class="glass card"><b>Jumat</b><br>Tania, Wadifatul, Yunia, Vicky, Stevanny, Syakirah, Syahdan</div>
+</div></section>
+
+<section id="siswa" class="section reveal">
+<h2>🔎 Daftar Siswa</h2>
+<input id="search" placeholder="Cari siswa...">
+<div id="list"></div>
+</section>
+
+<footer>© X-5 SMAN 24 JAKARTA • V5 FINAL GITHUB READY</footer>
+
+<script>
+const text='Solidarity • Creativity • Achievement';let i=0;
+(function t(){if(i<text.length){motto.textContent+=text[i++];setTimeout(t,70)}})();
+setInterval(()=>{let d=new Date();let h=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];clock.innerHTML='⏰ '+h[d.getDay()]+'<br>'+d.toLocaleTimeString('id-ID')+' WIB'},1000);
+window.addEventListener('scroll',()=>{let h=document.documentElement;progress.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+'%'});
+new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show'))).observe(document.querySelector('.reveal'));
+document.querySelectorAll('.reveal').forEach(x=>new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show'))).observe(x));
+const siswa=['Ailsa Nabila Ramdan','Aira Ramadhani','Aisyah Zahra Salsabila','Almyra Syifa Fauziah','Andrea Asafin','Aurelia Kamilah Iskandar','Chloe Audrey Fahmi','Desphia Wyas Arifin','Fakhira Annisa Fitri','Fitria Oktaviani','Janeeta Haya Setiawan','Jyoti Amauri Chieza','Kevin Novendra Pratama','Khaerul Fuad','Kharisma Syafirul Jannah','Mafaza Faradilla','Maulidya Ayu Nurbaiti','Mozza Az Zahwa','Muhammad Azkha Witjaksana','Muhammad Fawaid Anwar','Muhammad Mahir Awdad Wudad','Nabilah Amanda Putri','Naylatul Izzah','Pasya Muhammad Raja Lubis','Putri Amellia','Quinsha Muslimah Iskandar','Ridho Pratama Alfaridzi','Sabrina Karim','Shifa Khairunnisa Ramadhan','Sigit Priyanto','Stevanny Fernandes','Syahdan Altaffarel Afra','Tania Al-Mayra Ramdani','Vicky Pratama Zepri Nur','Wadifatul Awaliyah','Yunia Mutiara'];
+function r(q=''){list.innerHTML=siswa.filter(s=>s.toLowerCase().includes(q.toLowerCase())).map((s,i)=>`<div class="student">${i+1}. ${s}</div>`).join('')};r();search.oninput=e=>r(e.target.value);
+</script>
+</body></html>
